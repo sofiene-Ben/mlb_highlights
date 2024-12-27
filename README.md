@@ -77,7 +77,7 @@ installation:
 
 
 ## Structure du projet
-'''
+```
 projet/
 ├── app/                # Dossier principal pour le backend FastAPI
 │   ├── main.py         # Point d'entrée de l'API
@@ -90,7 +90,7 @@ projet/
 ├── Dockerfile          # Conteneurisation du projet
 ├── requirements.txt    # Dépendances Python
 └── README.md           # Documentation du projet
-'''
+```
 ## Contribuer
 
 
