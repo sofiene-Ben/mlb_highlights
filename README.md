@@ -51,17 +51,25 @@ Frontend : Framework choisi pour l’interface utilisateur ReactJS.
 ## Mise en place et exécution locale
 installation: 
     1.Clonez le dépôt:
+    ```
         git clone https://github.com/sofiene-Ben/mlb_highlights.git
         cd projet
+    ```
     
     2.Installez les dépendances:
+    ```
         pip install -r requirements.txt
+    ```
 
     3.Lancer le serveur backend:
+    ```
         uvicorn app.main:app --reload
+```
 
     4.Lancer le frontend:
+    ```
         npm run
+    ```
 
 ## Deploiement
 
