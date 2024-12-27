@@ -51,7 +51,7 @@ Frontend : Framework choisi pour l’interface utilisateur ReactJS.
 ## Mise en place et exécution locale
 installation: 
     1.Clonez le dépôt:
-        git clone https://github.com/votre-utilisateur/projet.git
+        git clone https://github.com/sofiene-Ben/mlb_highlights.git
         cd projet
     
     2.Installez les dépendances:
