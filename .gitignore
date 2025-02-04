@@ -45,9 +45,9 @@ Thumbs.db
 # Tests
 coverage/
 pytestdebug.log
+ 
+poubelle/
 
-poubelle
-
-migration
-aelembic.ini
+migration/
+alembic.ini
 .env

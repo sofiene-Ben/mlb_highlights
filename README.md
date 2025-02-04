@@ -18,7 +18,7 @@ Table des matières
 
 ## Fonctionnalités principales
 Gestion utilisateur:
-    - Créer un profils utilisateur (inscription par mail / google auth)
+    - Créer un profils utilisateur 
     - Ajouter des préférences ( sélectionner une équipe, un joueur, un type de contenue favoris parmis texte, vidéo, audio)
 
 Collecte de données:
@@ -27,24 +27,21 @@ Collecte de données:
 
 Traitement des données:
     - Générer automatiquement des résumés adaptés aux préférences utilisateurs.
-    - Vidéo: compilations des meilleurs moments.
-    - Audio: synthèse vocale pour récapituler les statistiques et commentaires.
     - Texte: résumé écrit des événements clés.
 
 Multilingue:
-    - Traduire et adapter les contenus pour les langues cibles.
+
 
 Notification:
-    - Les utilisateurs reçoivent (après chaque match ou 1 fois par semaine) les temps forts via un mail contenant un lien de redirection vers le résumé.
+
 
 Interface utilisateur:
-    - Les utilisateurs ont accès à une interface multilingue accessible sur mobile et desktop qui leur permet de paramétrer leurs préférences, visualiser leur contenus.
+    - Les utilisateurs ont accès à une interface accessible sur mobile et desktop qui leur permet de paramétrer leurs préférences, visualiser leur contenus.
 
 ## Architecture et technologies utilisées
 Backend : FastAPI pour les endpoints API.
 Traitement de données : pandas pour manipuler les données MLB.
-Base de données : MySQL (ou MongoDB si utilisé).
-Machine Learning : TensorFlow pour générer les résumés.
+Base de données : Postgres.
 Hébergement : Google Cloud pour le déploiement (Cloud Run).
 Frontend : Framework choisi pour l’interface utilisateur ReactJS.
 
@@ -79,17 +76,45 @@ installation:
 ## Structure du projet
 ```
 projet/
-├── app/                # Dossier principal pour le backend FastAPI
-│   ├── main.py         # Point d'entrée de l'API
-│   ├── models/         # Modèles de données
-│   ├── routes/         # Endpoints API
-│   ├── services/       # Logique métier
-├── data/               # Données sources (si applicable)
-├── frontend/           # Interface utilisateur (si applicable)
-├── tests/              # Tests unitaires et d'intégration
-├── Dockerfile          # Conteneurisation du projet
-├── requirements.txt    # Dépendances Python
-└── README.md           # Documentation du projet
+├── app/
+│   ├── api/
+│   │   ├── auth/
+│   │   │   └── security.py          # Gestion de l'authentification et des tokens
+│   │   ├── repositories/
+│   │   │   └── game_repository.py   # Accès aux données des matchs
+│   │   ├── routes/
+│   │   │   └── auth.py             
+│   │   │   └── game.py             
+│   │   │   └── hero.py              
+│   │   │   └── preferences.py          
+│   │   │   └── user.py              
+│   │   ├── services/
+│   │   │   └── match_service.py   
+│   │   │   └── schelduer.py   
+│   │   │   └── summary_service.py   
+│   │   ├── utils/
+│   │   │   └── api_client.py        # Client pour appels à des API externes
+│   │
+│   ├── domain/
+│   │   ├── entities/
+│   │   │   └── GameSummary.py             # Modèle d'entité utilisateur
+│   │   │   └── Hero.py 
+│   │   │   └── Users.py 
+│   │   ├── schemas/
+│   │   │   └── auth.py              # Schémas de validation pour l'authentification
+│   │
+│   ├── infrastructure/
+│   │   ├── config/
+│   │   │   └── app.py               # Configuration globale de l'application
+│   │   ├── database/
+│   │   │   └── dbchallenge.py       # Connexion à la base de données
+│   │
+│   ├── middlewares/
+│   │   ├── corsMiddleware.py        # Middleware pour la gestion du CORS
+│   │
+│   ├── main.py                      # Point d'entrée de l'API FastAPI
+│   ├── LICENSE                      # Licence du projet
+│   ├── README.md                    # Documentation du projet
 ```
 ## Contribuer
 
