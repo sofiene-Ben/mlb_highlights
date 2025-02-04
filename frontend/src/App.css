@@ -1,0 +1,518 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+/* 
+body {
+  background: linear-gradient(to bottom, #1e3a8a, #0d47a1);
+} */
+header {
+  /* background-color: #003F88; Bleu primaire 
+  color: white;
+  padding: 1rem 1.5rem;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1); */
+}
+
+
+
+
+body .color-black{
+  color: black;
+}
+
+.login-container {
+  color: #0000;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: column;
+  /* gap: 1rem; */
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #F7F7F7; /* Blanc cassé pour hover */
+}
+
+.desktop-nav {
+  display: none;
+  background-color: #003F88;
+}
+
+@media (min-width: 1024px) {
+  nav ul {
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  nav {
+    display: flex !important;   /* Affiche le menu directement sur desktop */
+  }
+
+  .logo-menu button {
+    display: none; 
+    /* Cache le bouton hamburger sur desktop */
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: #FFF;
+}
+
+h1 {
+  font-size: 24px;
+}
+
+.navbar-color {
+  background-color: #003F88;
+  min-height: 90px;
+  padding: 27px 20px;
+}
+.logo-menu {
+  /* padding: 0 20px; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-menu button {
+  background: none;
+  border: none;
+  font-size: 28px;
+}
+
+.logo-menu button i {
+  color: white;
+}
+
+
+
+.navbar-color-2 {
+  background-color: #0F4B8F;
+}
+
+.navbar-color-2.hidden {
+  display: none;
+}
+
+.navbar-color-2 nav {
+  padding: 20px 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav ul li {
+  /* align-items: center; */
+  height: 40px;
+  /* display: flex; */
+  width: 100%;
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+nav ul li:hover {
+  background-color: #496D96;
+}
+
+
+
+
+
+
+
+
+.main {
+  position: relative;
+  min-height: 75vh;
+  /* display: flex; */
+  /* align-items: center; */
+  /* justify-content: center; */
+  color: white;
+  text-align: center;
+}
+
+.main video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.main::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Overlay sombre */
+  z-index: 0;
+}
+
+.main-content {
+  position: relative;
+  z-index: 1; /* Au-dessus de la vidéo et de l'overlay */
+  padding: 0 20px;
+}
+
+.main-content h1 {
+  /* font-size: 2.5rem;
+  font-weight: bold; */
+  padding-top: 80px;
+  padding-bottom: 150px;
+  font-family: 'Bebas Neue';
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 47px;
+}
+
+.main-content button {
+  background-color: #1d40b0; /* Bleu */
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 150px;
+  text-transform: uppercase;
+  font-family: 'Roboto', sans-serif;
+  padding: 15px 50px;
+}
+
+.main-content button:hover {
+  background-color: #1e40af; /* Bleu plus foncé */
+}
+
+
+
+
+
+
+
+footer {
+  background-color: #1e3a8a; /* Couleur bleu foncé */
+  color: white;
+  text-align: center;
+  padding: 40px 20px 20px;
+  min-height: 130px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer .legal {
+  margin-bottom: 20px;
+}
+
+footer a {
+  color: white;
+  margin-right: 1rem;
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #d1d5db; /* Gris clair */
+}
+
+footer .social-icons a {
+  margin: 0 0.5rem;
+  font-size: 1.5rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Conteneur principal */
+.preferences-container {
+  background-color: #f8f9fa; /* Couleur de fond légèrement grise */
+  padding: 1.5rem; /* Espacement interne */
+  /* border-radius: 0.5rem; Coins arrondis */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre discrète */
+  max-width: 600px;
+  min-height: 78vh;
+  /* margin: 2rem auto; Centrer sur la page */
+}
+
+/* Titre principal */
+.preferences-container h2 {
+  font-size: 1.75rem; /* Taille du titre */
+  color: #0d47a1; /* Bleu foncé */
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-align: center; /* Centrer le texte */
+}
+
+/* Élément de préférence */
+.preference-item {
+  margin-bottom: 1.5rem; /* Espacement entre chaque élément */
+}
+
+/* Label des champs */
+.preference-item label {
+  font-size: 1rem; /* Taille standard */
+  color: #555; /* Gris moyen */
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+/* Case à cocher */
+.preference-item input[type="checkbox"] {
+  width: 1.25rem; /* Taille de la case */
+  height: 1.25rem;
+  margin-right: 0.5rem;
+  cursor: pointer;
+}
+
+/* Sélecteur déroulant */
+.preference-item select {
+  width: 100%; /* Occupe toute la largeur */
+  padding: 0.5rem;
+  border: 1px solid #ddd; /* Bordure grise claire */
+  border-radius: 0.25rem; /* Coins légèrement arrondis */
+  font-size: 1rem;
+  color: #333; /* Couleur du texte */
+  background-color: #fff; /* Fond blanc */
+  transition: border-color 0.2s ease;
+}
+
+.preference-item select:focus {
+  border-color: #0d47a1; /* Bordure bleue au focus */
+  outline: none; /* Supprimer le contour par défaut */
+}
+
+/* Bouton de sauvegarde */
+.preferences-container button {
+  display: block;
+  width: 100%; /* Largeur complète */
+  padding: 0.75rem;
+  background-color: #0d47a1; /* Bleu foncé */
+  color: #fff; /* Texte blanc */
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 0.5rem; /* Coins arrondis */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.preferences-container button:hover {
+  background-color: #1565c0; /* Bleu légèrement plus clair au survol */
+}
+
+/* Texte pour l'état de désactivation ou vide */
+.text-muted {
+  font-size: 0.875rem;
+  color: #888; /* Gris clair */
+  margin-top: 0.5rem;
+}
+
+/* Centrer les contenus */
+.text-center {
+  text-align: center;
+}
+
+
+
+
+
+
+/* highlights */
+
+
+/* Conteneur principal */
+body .highlights-container {
+color: black;
+}
+
+.highlights-container {
+  max-width: 800px;
+  /* margin: 2rem auto; */
+  /* padding: 1.5rem; */
+  padding: 1.5rem 0 1.5rem;
+  background: #f8f9fa;
+  /* border-radius: 8px; */
+  /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+  text-align: center;
+  min-height: 80vh;
+
+}
+
+.container {
+  min-width: 100%;
+}
+
+.container form {
+  margin: 0 auto;
+  max-width: 450px;
+}
+
+/* Titre principal */
+.container h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #003F88;
+  margin-bottom: 1rem;
+}
+
+/* Onglets (boutons) */
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.tabs button {
+  background: #0d47a1;
+  color: white;
+  font-size: 1rem;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.tabs button:hover {
+  background: #1565c0;
+}
+
+.tabs button.active {
+  background: #1e40af;
+  font-weight: bold;
+}
+
+/* Contenu des highlights */
+.highlights-content {
+  padding: 1rem;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Styles pour les composants Text, Video et Audio Highlights */
+.text-highlights,
+.video-highlights,
+.audio-highlights {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Cartes des highlights */
+.highlight-card {
+  width: 100%;
+  max-width: 600px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  text-align: left;
+}
+
+.highlight-card h3 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #003F88;
+  margin-bottom: 0.5rem;
+}
+
+.highlight-card p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Style spécifique pour les vidéos */
+.video-highlights video {
+  width: 100%;
+  border-radius: 8px;
+  max-height: 300px;
+  object-fit: cover;
+}
+
+/* Style spécifique pour l’audio */
+.audio-highlights audio {
+  width: 100%;
+}
+
+
+
+/* Article-list */
+
+.article-list {
+  padding: 0 10px;
+}
+
+.article-item {
+  margin: 20px 0;
+  text-align: left;
+  border-radius: 6px;
+  padding: 20px;
+}
+
+.article-item:hover {
+  background: #1565c057;
+  cursor: pointer;
+
+}
+
+.article-item h3 {
+  margin-bottom: 10px;
+}
+
+.date-match {
+  font-size: 12px;
+}
+
+
+/* Article-details */
+
+
+.article-detail {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  color: black;
+  min-height: 75vh;
+}
+
+.article-detail-block {
+  margin: 30px 15px;
+  text-align: justify;
+  min-height: 70vh;
+}
+
+.article-detail-block h2 {
+  margin-bottom: 15px;
+  text-align: left;
+}
