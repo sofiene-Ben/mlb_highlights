@@ -1,1 +1,53 @@
 .idea
+
+
+.venv
+
+# Logs
+*.log
+npm-debug.log*
+
+# Node.js
+node_modules/
+build/
+dist/
+.cache/
+
+# React
+.vite/
+*.env.local
+*.env.*.local
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pytest_cache/
+instance/
+
+# FastAPI
+
+# PostgreSQL
+pgdata/
+db_data/
+
+# Docker
+
+# IDE and editor specific
+.idea/
+.vscode/
+
+# Operating system
+.DS_Store
+Thumbs.db
+
+# Tests
+coverage/
+pytestdebug.log
+
+poubelle
+
+migration
+aelembic.ini
+.env
