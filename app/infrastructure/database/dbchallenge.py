@@ -3,8 +3,8 @@ from typing import Optional
 from fastapi import Depends
 from typing import Annotated
 import os
-from domain.entities.Users import Users
-from infrastructure.config.app import settings
+from app.domain.entities.Users import Users
+from app.infrastructure.config.app import settings
 
 postgres_url = settings.database_url
 
@@ -16,7 +16,8 @@ engine = create_engine(
     pool_size=10,  # Taille du pool de connexions
     max_overflow=20,  # Nombre maximum de connexions supplémentaires
     pool_timeout=30,  # Temps d'attente avant d'abandonner
-    echo=True)
+    echo=True
+    )
 
 def create_db_and_tables():
     SQLModel.metadata.create_all(engine)

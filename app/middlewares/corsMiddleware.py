@@ -1,7 +1,7 @@
 import re
 from fastapi import Request
 from fastapi.responses import JSONResponse
-from infrastructure.config.app import settings
+from app.infrastructure.config.app import settings
 
 cors = f"{settings.cors}"
 

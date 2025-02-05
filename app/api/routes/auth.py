@@ -1,10 +1,10 @@
 from typing import Annotated
-from domain.schemas.auth import Token
+from app.domain.schemas.auth import Token
 from fastapi.security import OAuth2PasswordRequestForm
-from api.auth.security import create_access_token, authenticate_user
+from app.api.auth.security import create_access_token, authenticate_user
 from fastapi import Depends, HTTPException, status, APIRouter
-from infrastructure.database.dbchallenge import get_session
-from infrastructure.config.app import settings
+from app.infrastructure.database.dbchallenge import get_session
+from app.infrastructure.config.app import settings
 from datetime import timedelta
 from sqlmodel import Session
 

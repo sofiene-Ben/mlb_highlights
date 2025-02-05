@@ -1,11 +1,11 @@
 from fastapi import APIRouter, HTTPException
-from domain.entities.Users import Users
-from domain.entities.GameSummary import GameSummary
-from api.utils.api_client import fetch_and_process_matches
-from api.services.match_service import get_match_highlights
-from api.services.summary_service import generate_game_summary
-from infrastructure.database.dbchallenge import get_session
-from api.auth.security import get_current_active_user
+from app.domain.entities.Users import Users
+from app.domain.entities.GameSummary import GameSummary
+from app.api.utils.api_client import fetch_and_process_matches
+from app.api.services.match_service import get_match_highlights
+from app.api.services.summary_service import generate_game_summary
+from app.infrastructure.database.dbchallenge import get_session
+from app.api.auth.security import get_current_active_user
 from sqlmodel import Session, select
 
 game_router = APIRouter(prefix="/api")

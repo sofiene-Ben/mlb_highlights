@@ -1,12 +1,12 @@
 from typing import Annotated
 from fastapi import Depends, APIRouter, HTTPException
-from domain.schemas.auth import User
-from domain.entities.Users import Users
-from api.auth.security import get_current_active_user
-from api.auth.security import get_password_hash
-from infrastructure.database.dbchallenge import SessionDep
+from app.domain.schemas.auth import User
+from app.domain.entities.Users import Users
+from app.api.auth.security import get_current_active_user
+from app.api.auth.security import get_password_hash
+from app.infrastructure.database.dbchallenge import SessionDep
 from sqlmodel import  select, Session
-from infrastructure.database.dbchallenge import get_session
+from app.infrastructure.database.dbchallenge import get_session
 
 
 user_router = APIRouter(prefix="/api")

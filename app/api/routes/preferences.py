@@ -1,11 +1,11 @@
 from fastapi import APIRouter, Form, Depends, HTTPException
-from infrastructure.database.dbchallenge import SessionDep
-from api.auth.security import get_current_active_user
+from app.infrastructure.database.dbchallenge import SessionDep
+from app.api.auth.security import get_current_active_user
 from typing import Annotated
-from domain.schemas.auth import User
-from domain.entities.Users import MediaPref
-from domain.entities.Users import Recurrences
-from domain.entities.Users import Users
+from app.domain.schemas.auth import User
+from app.domain.entities.Users import MediaPref
+from app.domain.entities.Users import Recurrences
+from app.domain.entities.Users import Users
 
 
 pref_router = APIRouter(prefix="/api")

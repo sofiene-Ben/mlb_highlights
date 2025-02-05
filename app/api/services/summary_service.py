@@ -1,8 +1,8 @@
 import google.generativeai as genai
-from infrastructure.config.app import settings
+from app.infrastructure.config.app import settings
 from datetime import datetime
-from api.services.match_service import get_match_highlights
-from api.repositories.game_repository import store_game_summary
+from app.api.services.match_service import get_match_highlights
+from app.api.repositories.game_repository import store_game_summary
 
 
 # Configuration de l'API Generative AI

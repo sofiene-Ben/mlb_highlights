@@ -1,8 +1,8 @@
 from datetime import datetime
-from infrastructure.database.dbchallenge import get_session
-from api.services.match_service import get_upcoming_matches
-from api.services.summary_service import generate_and_store_summaries
-from api.repositories.game_repository import get_game_summary_from_db
+from app.infrastructure.database.dbchallenge import get_session
+from app.api.services.match_service import get_upcoming_matches
+from app.api.services.summary_service import generate_and_store_summaries
+from app.api.repositories.game_repository import get_game_summary_from_db
 
 
 def fetch_and_process_matches():

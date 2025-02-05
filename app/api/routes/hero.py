@@ -1,15 +1,15 @@
-from infrastructure.database.dbchallenge import SessionDep
+from app.infrastructure.database.dbchallenge import SessionDep
 from fastapi import Depends,APIRouter, HTTPException, Query
-from domain.entities.Hero import Hero
+from app.domain.entities.Hero import Hero
 from typing import Annotated
 from sqlmodel import  select
-from domain.schemas.auth import User
-from api.auth.security import get_current_active_user
+from app.domain.schemas.auth import User
+from app.api.auth.security import get_current_active_user
 
 
 
 # from main import get_current_active_user  # Importez la fonction pour vérifier l'utilisateur actif
-from domain.entities.Users import Users 
+from app.domain.entities.Users import Users 
 
 
 hero_router = APIRouter(prefix="/api")

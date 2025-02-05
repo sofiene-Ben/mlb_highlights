@@ -1,7 +1,7 @@
 from sqlmodel import Session, select, or_
 from datetime import datetime
-from infrastructure.database.dbchallenge import engine
-from domain.entities.GameSummary import GameSummary
+from app.infrastructure.database.dbchallenge import engine
+from app.domain.entities.GameSummary import GameSummary
 
 def store_game_summary(
     game_id: str,

@@ -2,12 +2,12 @@ import jwt
 from passlib.context import CryptContext
 from fastapi.security import OAuth2PasswordBearer
 from datetime import datetime, timedelta, timezone
-from infrastructure.database.dbchallenge import get_session, get_user
+from app.infrastructure.database.dbchallenge import get_session, get_user
 from fastapi import Depends, HTTPException, status
 from jwt.exceptions import InvalidTokenError
-from domain.schemas.auth import TokenData
-from domain.entities.Users import Users
-from infrastructure.config.app import settings
+from app.domain.schemas.auth import TokenData
+from app.domain.entities.Users import Users
+from app.infrastructure.config.app import settings
 from typing import Annotated
 from sqlmodel import Session
 from typing import Optional
